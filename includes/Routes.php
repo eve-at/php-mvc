@@ -1,12 +1,12 @@
 <?php
-Route::set('about-us', function () {
-    AboutUsController::action();
-});
-
-Route::set('contact-us', function () {
+Route::set('contact-us', 'Contact us', function () {
     ContactUsController::action();
 });
 
-Route::set('index.php', function () {
+Route::set('about-us', 'About us', function () {
+    AboutUsController::action();
+});
+
+Route::set('index.php', 'Homepage', function () {
     IndexController::action();
 });
