@@ -6,5 +6,7 @@ class App
         if (! in_array($_GET['url'], Route::$validRoutes)) {
             return ErrorController::action('not-found');
         }
+
+        //
     }
 }
