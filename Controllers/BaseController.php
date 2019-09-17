@@ -3,7 +3,6 @@
 class BaseController
 {
     protected static $actionPath = "";
-    protected static $defaultAction = "index";
 
     public static function action(?string $viewName = 'index')
     {
