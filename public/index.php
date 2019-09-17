@@ -8,7 +8,8 @@
         }
     });
 
-    require_once '../includes/Routes.php';
+    require_once '../includes/helpers.php';
+    require_once '../includes/routes.php';
 
     $app = new App();
     $app->run();
