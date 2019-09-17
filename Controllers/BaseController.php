@@ -1,8 +1,17 @@
 <?php
+
 class BaseController
 {
-    public static function action($viewName)
+    protected static $actionPath = "";
+
+    public static function action(?string $viewName = 'index')
     {
-        return require_once '../Views/' . $viewName . '.php';
+        $class = get_called_class();
+        $viewName .= 'Action';
+        if (method_exists($class, $viewName)) {
+            return (new $class)->{$viewName}();
+        }
+
+        return (new ErrorController)->notFoundAction();
     }
 }
