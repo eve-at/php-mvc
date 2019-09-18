@@ -1,0 +1,1 @@
+<p>"<?= $company; ?>" was founded in <?= $year; ?>.</p>
