@@ -7,6 +7,11 @@
         <title><?= $metaTitle ?? 'Horns and hooves'; ?></title>
     </head>
     <body>
-        <?= $content ?? null; ?>
+        <?php include_once (VIEWS_PATH . 'partials/menu.php'); ?>
+
+        <h1><?= $pageTitle ?? null; ?></h1>
+        <hr>
+
+        <?= $pageContent ?? null; ?>
     </body>
 </html>

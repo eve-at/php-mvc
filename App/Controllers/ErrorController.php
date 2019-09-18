@@ -7,7 +7,8 @@ class ErrorController extends BaseController
         header("HTTP/1.0 404 Not Found");
 
         $metaTitle = 'Page not found';
+        $pageTitle = '404 Page not found';
 
-        return view('not-found', compact('metaTitle'));
+        return view('not-found', compact('metaTitle', 'pageTitle'));
     }
 }

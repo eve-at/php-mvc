@@ -3,10 +3,8 @@ class App
 {
     public function run()
     {
-        if (! in_array($_GET['controller'], Route::getValidRoutes())) {
+        if (! Route::executeActive()) {
             return ErrorController::action('not-found');
         }
-
-        //
     }
 }

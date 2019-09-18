@@ -6,12 +6,14 @@ class View
     {
         extract($params);
 
+        $metaTitle = static::generateMetaTitle($metaTitle ?? null);
+
+        $pageTitle = $pageTitle ?? null;
+
         ob_start();
         include_once(VIEWS_PATH . $controllerName . '/' . $viewName . '.php');
-        $content = ob_get_contents();
+        $pageContent = ob_get_contents();
         ob_end_clean();
-
-        $metaTitle = static::generateMetaTitle($metaTitle ?? null);
 
         return include_once(VIEWS_PATH . 'layouts/default.php');
     }
