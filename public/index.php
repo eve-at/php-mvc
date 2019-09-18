@@ -1,4 +1,7 @@
 <?php
+    define('PUBLIC_PATH', __DIR__);
+    define('APPLICATION_PATH', __DIR__ . '/../');
+    define('VIEWS_PATH', __DIR__ . '/../Views/');
 
     spl_autoload_register (function ($class_name) {
         if (file_exists('../includes/' . $class_name . '.php')) {
